@@ -1,0 +1,217 @@
+<div class="container">
+  <form class="font-weight-bold" #formulario="ngForm" (ngSubmit)="enviar(formulario)">
+
+    <div class="alert alert-info" *ngIf="mostraMensagemSucesso">
+      Formulário enviado com sucesso!
+    </div>
+    
+    <div class="alert alert-danger" *ngIf="mostraMensagemErro">
+      Formulário não foi enviado!
+    </div>
+
+    <div class="form-row"> <!--line 1-->
+
+      <div class="col-md-3 mb-3"> <!--Nota Fiscal-->
+        <label class="col-sm-10 control-label" for="notaFiscal">Nota Fiscal *</label>
+        <input type="text" class="form-control" id="notaFiscal" name="notaFiscal" placeholder="Nº NF" 
+          ngModel required>
+      </div>
+
+      <div class="col-md-3 mb-3"><!--Data de recebimento-->
+        <label class="col-sm-10 control-label" for="dtReceb">Data de Recebimento *</label>
+        <input type="date" class="form-control" id="dtReceb" name="dtReceb" ngModel required>
+      </div>
+    </div>
+
+    <div class="form-row"> <!--line 2-->
+
+      <div class="col-md-3 mb-3"> <!--OC1-->
+        <label class="col-sm-10 control-label" for="oc1">1ª OC *</label>
+        <input type="text" class="form-control" id="oc1" name="oc1"  placeholder="Nº da OC" ngModel required>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--OC2-->
+        <label class="col-sm-10 control-label" for="oc2">2ª OC</label>
+        <input type="text" class="form-control" id="oc2" name="oc2" placeholder="Nº da OC" ngModel>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--OC3-->
+        <label class="col-sm-10 control-label" for="oc3">3ª OC</label>
+        <input type="text" class="form-control" id="oc3" name="oc3" placeholder="Nº da OC" ngModel>
+      </div>
+    </div>
+
+    <div class="form-row"> <!--line 3-->
+
+      <div class="col-md-3 mb-3"> <!--fornecedor-->
+        <label class="col-sm-10 control-label" for="fornecedor">Fornecedor *</label>
+        <input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder="Nome do Fornecedor" 
+          ngModel required>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--comprador-->
+        <label class="col-sm-10 control-label" for="comprador">Comprador *</label>
+        <input type="text" class="form-control" id="comprador" name="comprador" placeholder="Nome do Comprador" 
+          ngModel required>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--1º conferente-->
+        <label class="col-sm-10 control-label" for="conferente1">1º Conferente *</label>
+        <select class="form-control" id='conferente1' name="conferente1" ngModel required>
+          <option></option>
+          <option>Guilherme Castro</option>
+          <option>Marcos Vinicius</option>
+          <option>Fábio</option>
+          <option>Ivan Cubatao</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--2º conferente-->
+        <label class="col-sm-10 control-label" for="conferente2">2º Conferente *</label>
+        <select class="form-control" id="conferente2" name="conferente2" ngModel required>
+          <option></option>
+          <option>Guilherme Castro</option>
+          <option>Marcos Vinicius</option>
+          <option>Fábio</option>
+          <option>Ivan Cubatao</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row"> <!--line 5-->
+
+      <div class="col-md-3 mb-3"> <!--apresentação correta-->
+        <label class="col-sm-10 control-label" for="apresCorreta">Apresentação Correta? *</label>
+        <select class="form-control" id="apresCorreta" name="apresCorreta" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--validade correta-->
+        <label class="col-sm-10 control-label" for="validCorreta">Validade Correta? *</label>
+        <select class="form-control" id="validCorreta" name="validCorreta" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--temperatura correta-->
+        <label class="col-sm-10 control-label" for="tempCorreta">Temperatura Correta? *</label>
+        <select class="form-control" id="tempCorreta" name="tempCorreta" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--lote correto-->
+        <label class="col-sm-10 control-label" for="loteCorreto">Lote Correto? *</label>
+        <select class="form-control" id="loteCorreto" name="loteCorreto" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row"> <!--line 6-->
+
+      <div class="col-md-3 mb-3"> <!--produto conservado-->
+        <label class="col-sm-10 control-label" for="prodConservado">Produto Conservado? *</label>
+        <select class="form-control" id="prodConservado" name="prodConservado" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--concentração correta-->
+        <label class="col-sm-10 control-label" for="concCorreta">Concentração Correta? *</label>
+        <select class="form-control" id="concCorreta" name="concCorreta" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--quantidade divergente-->
+        <label class="col-sm-10 control-label" for="qtdDivergente">Quantidade Divergente? *</label>
+        <select class="form-control" id="qtdDivergente" name="qtdDivergente" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--valor divergente-->
+        <label class="col-sm-10 control-label" for="valorDivergente">Valor Divergente? *</label>
+        <select class="form-control" id="valorDivergente" name="valorDivergente" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row"> <!--line 7-->
+      <div class="col-md-3 mb-3"> <!--produto controlado-->
+        <label class="col-sm-10 control-label" for="prodControlado">Produto Controlado? *</label>
+        <select class="form-control" id="prodControlado" name="prodControlado" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--produto termolabil-->
+        <label class="col-sm-10 control-label" for="prodTermolabil">Produto Termolábil? *</label>
+        <select class="form-control" id="prodTermolabil" name="prodTermolabil" ngModel required>
+          <option></option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--status-->
+        <label class="col-sm-10 control-label" for="status">Status *</label>
+        <select class="form-control" id="status" name="status" ngModel required>
+          <option></option>
+          <option>Devolvido</option>
+          <option>Ok</option>
+          <option>Pendente</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3"> <!--nao conformidades-->
+        <label class="col-sm-10 control-label" for="nConformidade">Não Conformidades *</label>
+        <select class="form-control" id="nConformidade" name="nConformidade" ngModel required>
+          <option></option>
+          <option>Antecipação do Fornecedor</option>
+          <option>Compra Equivocada</option>
+          <option>Divergência NF X Físico</option>
+          <option>Divergência O.C.</option>
+          <option>Duplicidade de Nota Fiscal</option>
+          <option>Produtos Danificados</option>
+          <option>Sem Cubagem</option>
+          <option>Sem Não Conformidades</option>
+          <option>Sem O.C.</option>
+          <option>Temperatura Incorreta</option>
+          <option>Validade Fora da Política</option>
+        </select>
+      </div>
+    </div>
+
+    
+    <div class="aviso-campos-obrigatorios">Campos com * são obrigatórios</div>
+
+    <button type="submit" class="btn btn-primary btn-lg" id="btnEnviar" [disabled]="!formulario.valid">
+      Enviar
+    </button>
+    
+    <button type="reset" class="btn btn-warning btn-lg">Limpar</button>
+  </form>
+</div>
+

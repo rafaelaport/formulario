@@ -1,0 +1,13 @@
+<!--<p>Entre com o id</p>
+<input #idFormulario>-->
+<p>Lista de Formulários</p>
+<p>Página: {{ pagina }}</p>
+<div class="list-group">
+<!-- mostra lista de formularios no menu consulta, caso clique em algum formulario é direcionado para seus detalhes -->
+    <a class="list-group-item list-group-item-action"
+        *ngFor='let formulario of formularios'
+        [routerLink]="['/consulta', formulario.id]">
+        {{ formulario.nome }}
+    </a>
+</div>
+<button (click)="proximaPagina()">Próxima Página</button>
