@@ -10,7 +10,7 @@ Para rodar e criar a pasta do cypress com os testes
 
 describe('Testes do Formulário', function() {
     it('Visitar página do formulário', function() {
-      cy.visit('http://localhost:4200/')
+      cy.visit('http://localhost:4200/painel')
 
       cy.contains('Hospital Badim')
     })

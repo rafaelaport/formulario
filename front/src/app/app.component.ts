@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AutenticacaoService } from "src/app/login/autenticacao.service";
+import { AuthService } from './login/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +12,12 @@ export class AppComponent {
 
   mostrarMenu: boolean = false;
 
-  constructor(private autenticacaoService: AutenticacaoService){
+  constructor(private authService: AuthService){
 
   }
 
   ngOnInit(){
-    this.autenticacaoService.mostrarMenuEmitter.subscribe(
+    this.authService.mostrarMenuEmitter.subscribe(
       mostrar => this.mostrarMenu = mostrar
     );
   }

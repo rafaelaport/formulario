@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-formulario-recebimento',
-  templateUrl: './formulario-recebimento.component.html',
-  styleUrls: ['./formulario-recebimento.component.css']
+  selector: 'app-formulario.recebimento',
+  templateUrl: './formulario.recebimento.component.html',
+  styleUrls: ['./formulario.recebimento.component.css']
 })
 export class FormularioRecebimentoComponent implements OnInit {
 
@@ -15,7 +14,7 @@ export class FormularioRecebimentoComponent implements OnInit {
   enviar(formulario){
 
     //envia pelo método post um json com os valores informado nos campos do formulário
-      this.http.post('formulario-recebimento', formulario.value)
+      this.http.post('painel', formulario.value)
       .subscribe(dados => {
         //apaga as informações dos campos do formulário quando o mesmo é enviado com sucesso
         formulario.reset();

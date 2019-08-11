@@ -6,7 +6,7 @@ import { Usuario } from "src/app/login/usuario";
 @Injectable({
   providedIn: 'root'
 })
-export class AutenticacaoService {
+export class AuthService {
 
   private usuarioAutenticado: boolean = false;
 
@@ -29,5 +29,9 @@ export class AutenticacaoService {
         this.mostrarMenuEmitter.emit(false);
 
       }
+  }
+
+  usuarioEstaAutenticado(){
+    return this.usuarioAutenticado;
   }
 }

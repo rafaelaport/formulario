@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 
-import { FormularioConsultaService } from "src/app/consulta/formulario-consulta/formulario-consulta.service";
+import { FormularioConsultaService } from "src/app/consulta/formulario-consulta/formulario.consulta.service";
 
 @Component({
-  selector: 'app-formulario-consulta',
-  templateUrl: './formulario-consulta.component.html',
-  styleUrls: ['./formulario-consulta.component.css']
+  selector: 'app-formulario.consulta',
+  templateUrl: './formulario.consulta.component.html',
+  styleUrls: ['./formulario.consulta.component.css']
 })
 export class FormularioConsultaComponent implements OnInit {
 

@@ -9,7 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from "src/app/app.routing.module";
 import { ConsultaModule } from "src/app/consulta/consulta.module";
 import { PainelModule } from "src/app/painel/painel.module";
-import { AutenticacaoService } from "src/app/login/autenticacao.service";
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
 
@@ -29,7 +30,8 @@ import { AutenticacaoService } from "src/app/login/autenticacao.service";
   ],
 
   providers: [
-    AutenticacaoService
+    AuthService,
+    AuthGuard
   ],
   
   bootstrap: [
