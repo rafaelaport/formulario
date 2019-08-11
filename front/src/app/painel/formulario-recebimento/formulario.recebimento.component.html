@@ -14,12 +14,13 @@
       <div class="col-md-3 mb-3"> <!--Nota Fiscal-->
         <label class="col-sm-10 control-label" for="notaFiscal">Nota Fiscal *</label>
         <input type="text" class="form-control" id="notaFiscal" name="notaFiscal" placeholder="Nº NF" 
-          ngModel required>
+          (input)="onInput()" ngModel required>
       </div>
 
       <div class="col-md-3 mb-3"><!--Data de recebimento-->
         <label class="col-sm-10 control-label" for="dtReceb">Data de Recebimento *</label>
-        <input type="date" class="form-control" id="dtReceb" name="dtReceb" ngModel required>
+        <input type="date" class="form-control" id="dtReceb" name="dtReceb" 
+          (input)="onInput()" ngModel required>
       </div>
     </div>
 
@@ -27,17 +28,20 @@
 
       <div class="col-md-3 mb-3"> <!--OC1-->
         <label class="col-sm-10 control-label" for="oc1">1ª OC *</label>
-        <input type="text" class="form-control" id="oc1" name="oc1"  placeholder="Nº da OC" ngModel required>
+        <input type="text" class="form-control" id="oc1" name="oc1"  placeholder="Nº da OC" 
+          (input)="onInput()" ngModel required>
       </div>
 
       <div class="col-md-3 mb-3"> <!--OC2-->
         <label class="col-sm-10 control-label" for="oc2">2ª OC</label>
-        <input type="text" class="form-control" id="oc2" name="oc2" placeholder="Nº da OC" ngModel>
+        <input type="text" class="form-control" id="oc2" name="oc2" placeholder="Nº da OC" 
+          (input)="onInput()" ngModel>
       </div>
 
       <div class="col-md-3 mb-3"> <!--OC3-->
         <label class="col-sm-10 control-label" for="oc3">3ª OC</label>
-        <input type="text" class="form-control" id="oc3" name="oc3" placeholder="Nº da OC" ngModel>
+        <input type="text" class="form-control" id="oc3" name="oc3" placeholder="Nº da OC" 
+          (input)="onInput()" ngModel>
       </div>
     </div>
 
@@ -46,18 +50,19 @@
       <div class="col-md-3 mb-3"> <!--fornecedor-->
         <label class="col-sm-10 control-label" for="fornecedor">Fornecedor *</label>
         <input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder="Nome do Fornecedor" 
-          ngModel required>
+          (input)="onInput()" ngModel required>
       </div>
 
       <div class="col-md-3 mb-3"> <!--comprador-->
         <label class="col-sm-10 control-label" for="comprador">Comprador *</label>
         <input type="text" class="form-control" id="comprador" name="comprador" placeholder="Nome do Comprador" 
-          ngModel required>
+          (input)="onInput()" ngModel required>
       </div>
 
       <div class="col-md-3 mb-3"> <!--1º conferente-->
         <label class="col-sm-10 control-label" for="conferente1">1º Conferente *</label>
-        <select class="form-control" id='conferente1' name="conferente1" ngModel required>
+        <select class="form-control" id='conferente1' name="conferente1" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Guilherme Castro</option>
           <option>Marcos Vinicius</option>
@@ -68,7 +73,8 @@
 
       <div class="col-md-3 mb-3"> <!--2º conferente-->
         <label class="col-sm-10 control-label" for="conferente2">2º Conferente *</label>
-        <select class="form-control" id="conferente2" name="conferente2" ngModel required>
+        <select class="form-control" id="conferente2" name="conferente2" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Guilherme Castro</option>
           <option>Marcos Vinicius</option>
@@ -82,7 +88,8 @@
 
       <div class="col-md-3 mb-3"> <!--apresentação correta-->
         <label class="col-sm-10 control-label" for="apresCorreta">Apresentação Correta? *</label>
-        <select class="form-control" id="apresCorreta" name="apresCorreta" ngModel required>
+        <select class="form-control" id="apresCorreta" name="apresCorreta" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -91,7 +98,8 @@
 
       <div class="col-md-3 mb-3"> <!--validade correta-->
         <label class="col-sm-10 control-label" for="validCorreta">Validade Correta? *</label>
-        <select class="form-control" id="validCorreta" name="validCorreta" ngModel required>
+        <select class="form-control" id="validCorreta" name="validCorreta" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -100,7 +108,8 @@
 
       <div class="col-md-3 mb-3"> <!--temperatura correta-->
         <label class="col-sm-10 control-label" for="tempCorreta">Temperatura Correta? *</label>
-        <select class="form-control" id="tempCorreta" name="tempCorreta" ngModel required>
+        <select class="form-control" id="tempCorreta" name="tempCorreta" 
+          (input)="onInput()"ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -109,7 +118,8 @@
 
       <div class="col-md-3 mb-3"> <!--lote correto-->
         <label class="col-sm-10 control-label" for="loteCorreto">Lote Correto? *</label>
-        <select class="form-control" id="loteCorreto" name="loteCorreto" ngModel required>
+        <select class="form-control" id="loteCorreto" name="loteCorreto" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -121,7 +131,8 @@
 
       <div class="col-md-3 mb-3"> <!--produto conservado-->
         <label class="col-sm-10 control-label" for="prodConservado">Produto Conservado? *</label>
-        <select class="form-control" id="prodConservado" name="prodConservado" ngModel required>
+        <select class="form-control" id="prodConservado" name="prodConservado" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -130,7 +141,8 @@
 
       <div class="col-md-3 mb-3"> <!--concentração correta-->
         <label class="col-sm-10 control-label" for="concCorreta">Concentração Correta? *</label>
-        <select class="form-control" id="concCorreta" name="concCorreta" ngModel required>
+        <select class="form-control" id="concCorreta" name="concCorreta" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -139,7 +151,8 @@
 
       <div class="col-md-3 mb-3"> <!--quantidade divergente-->
         <label class="col-sm-10 control-label" for="qtdDivergente">Quantidade Divergente? *</label>
-        <select class="form-control" id="qtdDivergente" name="qtdDivergente" ngModel required>
+        <select class="form-control" id="qtdDivergente" name="qtdDivergente" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -148,7 +161,8 @@
 
       <div class="col-md-3 mb-3"> <!--valor divergente-->
         <label class="col-sm-10 control-label" for="valorDivergente">Valor Divergente? *</label>
-        <select class="form-control" id="valorDivergente" name="valorDivergente" ngModel required>
+        <select class="form-control" id="valorDivergente" name="valorDivergente" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -159,7 +173,8 @@
     <div class="form-row"> <!--line 7-->
       <div class="col-md-3 mb-3"> <!--produto controlado-->
         <label class="col-sm-10 control-label" for="prodControlado">Produto Controlado? *</label>
-        <select class="form-control" id="prodControlado" name="prodControlado" ngModel required>
+        <select class="form-control" id="prodControlado" name="prodControlado" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -168,7 +183,8 @@
 
       <div class="col-md-3 mb-3"> <!--produto termolabil-->
         <label class="col-sm-10 control-label" for="prodTermolabil">Produto Termolábil? *</label>
-        <select class="form-control" id="prodTermolabil" name="prodTermolabil" ngModel required>
+        <select class="form-control" id="prodTermolabil" name="prodTermolabil" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Sim</option>
           <option>Não</option>
@@ -177,7 +193,8 @@
 
       <div class="col-md-3 mb-3"> <!--status-->
         <label class="col-sm-10 control-label" for="status">Status *</label>
-        <select class="form-control" id="status" name="status" ngModel required>
+        <select class="form-control" id="status" name="status" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Devolvido</option>
           <option>Ok</option>
@@ -187,7 +204,8 @@
 
       <div class="col-md-3 mb-3"> <!--nao conformidades-->
         <label class="col-sm-10 control-label" for="nConformidade">Não Conformidades *</label>
-        <select class="form-control" id="nConformidade" name="nConformidade" ngModel required>
+        <select class="form-control" id="nConformidade" name="nConformidade" 
+          (input)="onInput()" ngModel required>
           <option></option>
           <option>Antecipação do Fornecedor</option>
           <option>Compra Equivocada</option>

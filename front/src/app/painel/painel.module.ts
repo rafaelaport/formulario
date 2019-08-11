@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 
 import { FormularioRecebimentoComponent } from "src/app/painel/formulario-recebimento/formulario.recebimento.component";
 import { PainelRoutingModule } from "src/app/painel/painel.routing.module";
+import { FormularioDeactivateGuard } from '../guards/formulario.deactivate.guard';
 
 @NgModule({
 
@@ -15,6 +16,10 @@ import { PainelRoutingModule } from "src/app/painel/painel.routing.module";
 
     declarations: [
         FormularioRecebimentoComponent
+    ],
+
+    providers: [
+        FormularioDeactivateGuard
     ]
 
 })

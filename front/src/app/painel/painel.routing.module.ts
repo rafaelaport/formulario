@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FormularioRecebimentoComponent } from "src/app/painel/formulario-recebimento/formulario.recebimento.component";
 import { AuthGuard } from '../guards/auth.guard';
+import { FormularioDeactivateGuard } from '../guards/formulario.deactivate.guard';
 
 const painelRoutes: Routes = [
     {path: 'painel', component: FormularioRecebimentoComponent, 
-        canActivate: [ AuthGuard ]},
+        canActivate: [ AuthGuard ],
+        canDeactivate: [ FormularioDeactivateGuard ]},
 ];
 
 @NgModule({

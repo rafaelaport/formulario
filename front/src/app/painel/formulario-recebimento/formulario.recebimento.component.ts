@@ -10,8 +10,15 @@ export class FormularioRecebimentoComponent implements OnInit {
 
   mostraMensagemSucesso: boolean;
   mostraMensagemErro: boolean;
+  private formularioMudou: boolean = false;
 
-  enviar(formulario){
+  constructor(private http: Http) { }
+
+  ngOnInit() {
+    
+   }
+
+   enviar(formulario){
 
     //envia pelo método post um json com os valores informado nos campos do formulário
       this.http.post('painel', formulario.value)
@@ -31,10 +38,32 @@ export class FormularioRecebimentoComponent implements OnInit {
       setTimeout(() => this.mostraMensagemErro = false, 5000);
     }
 
-  constructor(private http: Http) { }
 
-  ngOnInit() {
-    
-   }
+    //verifica se ouve alguma mudança em algum campo do formulário
+    onInput(){
+
+      this.formularioMudou = true;
+
+    }
+
+    //verificação se pode ou não mudar de página enquanto altera informações
+    podeMudarRota() {
+      //se o formulário sofreu alguma altração nos campos e o usuário tenta mudar de página
+      if (this.formularioMudou){
+
+        //é mostrada um aviso se deseja continuar ou cancelar
+        var caixaDialogo = confirm("Tem certeza que deseja sair dessa página? " + 
+          "As modificações não serão salvas!");
+      
+        //se o usuário clicar em ok, é perdido as informações alteradas e redecionado para nova página
+        if(caixaDialogo == true) return true;
+        //se o usuário clicar em cancelar, as informações não são perdidas e o usuário continua na mesma página
+        else return false ;
+  
+      }
+
+      return true;
+
+    }
 
 }
