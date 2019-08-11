@@ -16,21 +16,28 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario) {
     
+    //verifica se o usuário informado é o mesmo cadastrado
     if(usuario.nome === "usuario@email.com" &&
       usuario.senha === '123456'){
 
+        //se o usuário for o mesmo ele está autenticado
         this.usuarioAutenticado = true;
+        //os menus do sistema são exibidos para que o usuário autenticado possa navegar
         this.mostrarMenuEmitter.emit(true);
+        //é exibido a página principal, HomeComponent
         this.router.navigate(['/']);
 
       } else {
 
+        //usuário não está autenticado
         this.usuarioAutenticado = false;
+        //o menu não é exibido para que ele navegue
         this.mostrarMenuEmitter.emit(false);
 
       }
   }
 
+  //retorna se o usuário está autenticado ou não
   usuarioEstaAutenticado(){
     return this.usuarioAutenticado;
   }

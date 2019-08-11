@@ -10,9 +10,24 @@ Para rodar e criar a pasta do cypress com os testes
 
 describe('Testes do Formulário', function() {
     it('Visitar página do formulário', function() {
-      cy.visit('http://localhost:4200/painel')
+      cy.visit('http://localhost:4200')
 
       cy.contains('Hospital Badim')
+    })
+
+    it('Fazer login', function() {
+        cy.url().should('include', '/login')
+
+        cy.get('#usuario')
+            .type('usuario@email.com')
+            .should('have.value', 'usuario@email.com')
+
+        cy.get('#senha')
+            .type('123456')
+            .should('have.value', '123456')
+
+        cy.get('#btnLogin').click()
+
     })
 
     it('Clicar no menu "Painel"', function() {
