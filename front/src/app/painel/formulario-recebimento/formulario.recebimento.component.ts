@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { IFormularioCanDeactivate } from 'src/app/guards/iformulario.candeactivate';
 
 @Component({
   selector: 'app-formulario.recebimento',
   templateUrl: './formulario.recebimento.component.html',
   styleUrls: ['./formulario.recebimento.component.css']
 })
-export class FormularioRecebimentoComponent implements OnInit {
+export class FormularioRecebimentoComponent implements OnInit, IFormularioCanDeactivate {
 
   mostraMensagemSucesso: boolean;
   mostraMensagemErro: boolean;
@@ -48,6 +49,7 @@ export class FormularioRecebimentoComponent implements OnInit {
 
     //verificação se pode ou não mudar de página enquanto altera informações
     podeMudarRota() {
+      
       //se o formulário sofreu alguma altração nos campos e o usuário tenta mudar de página
       if (this.formularioMudou){
 

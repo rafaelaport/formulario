@@ -9,7 +9,7 @@ import { AuthService } from '../login/auth.service';
 })
 export class AuthGuard implements CanActivate{
 
-  // canActivate: [ AuthGuard ] usudo nas rotas que não podem ser exibidas até o usuário se logar
+  // canActivate: [ AuthGuard ] usado nas rotas que não podem ser exibidas até o usuário se logar
   
   constructor(
     private authService: AuthService,

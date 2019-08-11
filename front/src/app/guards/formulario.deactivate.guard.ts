@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { FormularioRecebimentoComponent } from '../painel/formulario-recebimento/formulario.recebimento.component';
+import { IFormularioCanDeactivate } from './iformulario.candeactivate';
 
 @Injectable()
-export class FormularioDeactivateGuard implements CanDeactivate<FormularioRecebimentoComponent> {
+export class FormularioDeactivateGuard implements CanDeactivate<IFormularioCanDeactivate> {
 
     //canDeactivate: [ FormularioDeactivateGuard ] é usado quando deseja desativar uma rota
     //um exemplo quando o usuário muda de página acidentalmente, enquanto está registrando algo em um formulário
     
     canDeactivate(
-        component: FormularioRecebimentoComponent,
+        component: IFormularioCanDeactivate,
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ) : Observable<boolean> | Promise<boolean> | boolean {
