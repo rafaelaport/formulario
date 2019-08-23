@@ -1,8 +1,34 @@
-div.container {
-  margin-top: 25px;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+}
+
+.main-section {
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 0;
+}
+
+.modal-content {
+  background-color: #3b3d4159;
+  border-radius:15px;
+  padding-top: 20px;
+}
+
+.control-label {
+  margin-top: 10px;
+  font-weight: bold;
+  right: 40%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+
 }
 
 button {
-  margin-right: 62px;
   margin-bottom: 25px;
 }
