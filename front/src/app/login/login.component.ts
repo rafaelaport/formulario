@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   //é chamado quando o usuário se loga
   fazerLogin(){
-
+    
     //envia para o service o usuário informado na tela de login para autenticação
     this.authService.fazerLogin(this.usuario);
     

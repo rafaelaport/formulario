@@ -10,7 +10,7 @@ body {
 }
 
 .modal-content {
-  background-color: #3b3d4159;
+  background-color: #DCDCDC;
   border-radius:15px;
   padding-top: 20px;
 }
@@ -25,10 +25,10 @@ body {
   margin-bottom: 20px;
 }
 
-.form-group input {
-
-}
-
 button {
   margin-bottom: 25px;
+}
+
+.ng-invalid.ng-touched:not(form){
+  border: 1px solid red;
 }
