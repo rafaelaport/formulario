@@ -8,18 +8,24 @@ import { AuthService } from './login/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hospital01';
+  title = 'Hospital Badim';
 
   mostrarMenu: boolean = false;
+  navbarOpen = false;
 
-  constructor(private authService: AuthService){
+  constructor(private authService: AuthService) {
 
   }
 
-  ngOnInit(){
-    //quando a página inicial é carregada, verifica se o usuário está ou não logado para mostrar ou não os menus
+  // tslint:disable-next-line: use-life-cycle-interface
+  ngOnInit() {
+    // quando a página inicial é carregada, verifica se o usuário está ou não logado para mostrar ou não os menus
     this.authService.mostrarMenuEmitter.subscribe(
       mostrar => this.mostrarMenu = mostrar
     );
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }
