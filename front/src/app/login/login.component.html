@@ -2,6 +2,10 @@
     <div class="col-sm-8 main-section">
         <div class="modal-content">
             <div class="col-12 form-input">
+                <!--Crei a div para informar quando o login ou senha estão inconretos e o *ngIf para fazer o teste da variavel-->
+                <div class="alert alert-danger" *ngIf="authService.alertaLoginIncorreto">
+                    Login ou senha inválidos!
+                </div>
                 <form  #loginSenha="ngForm" (ngSubmit)="fazerLogin()">
                     <div class="form-group">
 
