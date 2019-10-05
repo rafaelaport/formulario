@@ -1,4 +1,4 @@
-package br.com.formulario.back.models;
+package br.com.back.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Formulario {
 	
 	@Id
-	@JsonIgnore
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idFormulario;
 	

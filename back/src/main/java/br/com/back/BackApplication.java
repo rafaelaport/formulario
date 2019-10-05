@@ -1,4 +1,4 @@
-package br.com.formulario.back;
+package br.com.back;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

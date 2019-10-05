@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from "rxjs";
+import { Http } from '@angular/http';
 
-import { FormularioConsultaService } from "src/app/consulta/formulario-consulta/formulario.consulta.service";
-
+import { FormularioConsultaService } from '../formulario-consulta/formulario.consulta.service';
+//import { FormularioRecebimento } from '../formulario-consulta/formulario.recebimento';
 
 @Component({
   selector: 'app-formulario.consulta.detalhe',
@@ -12,6 +13,8 @@ import { FormularioConsultaService } from "src/app/consulta/formulario-consulta/
 })
 export class FormularioConsultaDetalheComponent implements OnInit {
 
+  @Input() arrayFormularios;
+  
   id: number;
   inscricao: Subscription;
   formulario: any;
@@ -19,6 +22,7 @@ export class FormularioConsultaDetalheComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private http: Http,
     private formularioConsultaService: FormularioConsultaService
   ) {
     //this.id = this.route.snapshot.params['id']; //não troca id se alterado no campo, somente se carregar a página novamente
@@ -31,12 +35,15 @@ export class FormularioConsultaDetalheComponent implements OnInit {
         this.id = params['id'];
 
         //consulta se o formulário existe ou não e o guarda o valor retornado em getFormulario na variável formulario
-        this.formulario = this.formularioConsultaService.getFormulario(this.id);
-
+        this.http.get("consulta/" + this.id).subscribe(t => {
+          this.formulario = t.json();
+        })
+        //this.formulario = this.formularioConsultaService.getFormulario(this.id);
+        
         //se o formulário não existir é redirecionado para o componente formulario-nao-encontrado
-        if(this.formulario == null){
+        /*if(this.formularioRecebimento == null){
           this.router.navigate(['/nao-encontrado']);
-        }
+        }*/
       }
     );
   }

@@ -1,13 +1,12 @@
-package br.com.formulario.back.services;
+package br.com.back.services;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.formulario.back.models.Usuario;
-import br.com.formulario.back.repositories.FormularioRepository;
-import br.com.formulario.back.repositories.UsuarioRepository;
+import br.com.back.models.Usuario;
+import br.com.back.repositories.UsuarioRepository;
 
 @Service
 public class UsuarioService {

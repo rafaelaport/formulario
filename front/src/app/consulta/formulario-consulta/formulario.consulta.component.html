@@ -1,13 +1,25 @@
-<!--<p>Entre com o id</p>
-<input #idFormulario>-->
 <p>Lista de Formulários</p>
-<p>Página: {{ pagina }}</p>
-<div class="list-group">
-<!-- mostra lista de formularios no menu consulta, caso clique em algum formulario é direcionado para seus detalhes -->
-    <a class="list-group-item list-group-item-action"
-        *ngFor='let formulario of formularios'
-        [routerLink]="['/consulta', formulario.id]">
-        {{ formulario.nome }}
-    </a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nota Fiscal</th>
+            <th scope="col">Data de Recebimento</th>
+            <th scope="col">Fornecedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let formulario of arrayFormularios'
+        [routerLink]="['/consulta', formulario.idFormulario]">
+            <td>{{ formulario.idFormulario }}</td>
+            <td>{{ formulario.notaFiscal }}</td>
+            <td>{{ formulario.dtReceb }}</td>
+            <td>{{ formulario.fornecedor }}</td>      
+        </tr>
+    </tbody>
+</table>
+
+<div class="align-right">
+  <jw-pagination [items]="items" (changePage)="proximaPagina($event)"></jw-pagination>
 </div>
-<button (click)="proximaPagina()">Próxima Página</button>

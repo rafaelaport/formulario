@@ -1,4 +1,4 @@
-package br.com.formulario.back.models;
+package br.com.back.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
