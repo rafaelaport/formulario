@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, CanDeactivate } from '@angular/router';
+import { CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { IFormularioCanDeactivate } from './iformulario.candeactivate';
@@ -11,9 +11,7 @@ export class FormularioDeactivateGuard implements CanDeactivate<IFormularioCanDe
     //um exemplo quando o usuário muda de página acidentalmente, enquanto está registrando algo em um formulário
     
     canDeactivate(
-        component: IFormularioCanDeactivate,
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
+        component: IFormularioCanDeactivate
     ) : Observable<boolean> | Promise<boolean> | boolean {
         
         //verificação se pode ou não mudar de página enquanto altera informações

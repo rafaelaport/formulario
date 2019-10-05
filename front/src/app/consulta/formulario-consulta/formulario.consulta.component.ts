@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
 import { Http } from '@angular/http';
+
 import { FormularioRecebimento } from './formulario.recebimento';
 
 @Component({
@@ -11,13 +11,9 @@ import { FormularioRecebimento } from './formulario.recebimento';
 export class FormularioConsultaComponent implements OnInit {
 
   items = [];
-  arrayFormularios: any[];
+  arrayFormularios: FormularioRecebimento[];
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private http: Http
-    ) { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
     //mostra todos os formularios na tela de consulta
@@ -27,8 +23,8 @@ export class FormularioConsultaComponent implements OnInit {
   }
 
   //passa para próxima página
-  proximaPagina(arrayFormularios: Array<FormularioRecebimento>){
-     this.arrayFormularios = arrayFormularios;
+  proximaPagina(items: Array<FormularioRecebimento>){
+     this.arrayFormularios = items;
 
   }
 

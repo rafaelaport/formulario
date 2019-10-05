@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { Http } from '@angular/http';
 
+import { FormularioRecebimento } from '../formulario-consulta/formulario.recebimento';
+
 @Component({
   selector: 'app-formulario.consulta.detalhe',
   templateUrl: './formulario.consulta.detalhe.component.html',
@@ -14,11 +16,10 @@ export class FormularioConsultaDetalheComponent implements OnInit {
   
   id: number;
   inscricao: Subscription;
-  formulario: any;
+  formulario: FormularioRecebimento;
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private http: Http,
   ) { }
 

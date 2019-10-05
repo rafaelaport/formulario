@@ -8,10 +8,11 @@ import { FormularioDeactivateGuard } from '../guards/formulario.deactivate.guard
 
 const painelRoutes: Routes = [
     {path: 'painel', component: PainelComponent,
-        canActivate: [ AuthGuard ]
-        },
-        {path: 'painel/formulario-recebimento', component: FormularioRecebimentoComponent, canActivate: [ AuthGuard ],
-         canDeactivate: [ FormularioDeactivateGuard ]},
+        canActivate: [ AuthGuard ]},
+        
+    {path: 'painel/formulario-recebimento', component: FormularioRecebimentoComponent, 
+        canActivate: [ AuthGuard ],
+        canDeactivate: [ FormularioDeactivateGuard ]},
 
 ];
 

@@ -1,6 +1,6 @@
 export class FormularioRecebimento {
     
-    id: string;
+    idFormulario: string;
     notaFiscal: string;
     dtReceb: string;
     oc1: string;
