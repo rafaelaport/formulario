@@ -1,4 +1,4 @@
-/*export class FormularioRecebimento {
+export class FormularioRecebimento {
     
     id: string;
     notaFiscal: string;
@@ -23,4 +23,4 @@
     status: string;
     nConformidade: string
     
-}*/
+}

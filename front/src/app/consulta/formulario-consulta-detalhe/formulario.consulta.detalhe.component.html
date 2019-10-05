@@ -1,8 +1,22 @@
-<!--detalha informações do formulário-->
-<p>Id: {{ id }}</p>
-<!--p *ngFor='let formulario of arrayFormularios'>
-{{ formulario.notaFiscal }}
-{{ formulario.dtRecebimento }}
-{{ formulario.oc1 }}
-</p-->
-
+<p>Id: {{ formulario?.idFormulario }}</p>
+<p>{{ formulario?.notaFiscal }}</p>
+<p>{{ formulario?.dtReceb }}</p>
+<p>{{ formulario?.oc1 }}</p>
+<p>{{ formulario?.oc2 }}</p>
+<p>{{ formulario?.oc3 }}</p>
+<p>{{ formulario?.fornecedor }}</p>
+<p>{{ formulario?.comprador }}</p>
+<p>{{ formulario?.conferente1 }}</p>
+<p>{{ formulario?.conferente2 }}</p>
+<p>{{ formulario?.apresCorreta }}</p>
+<p>{{ formulario?.validCorreta }}</p>
+<p>{{ formulario?.tempCorreta }}</p>
+<p>{{ formulario?.loteCorreto }}</p>
+<p>{{ formulario?.prodConservado }}</p>
+<p>{{ formulario?.concCorreta }}</p>
+<p>{{ formulario?.qtdDivergente }}</p>
+<p>{{ formulario?.valorDivergente }}</p>
+<p>{{ formulario?.prodControlado }}</p>
+<p>{{ formulario?.prodTermolabil }}</p>
+<p>{{ formulario?.status }}</p>
+<p>{{ formulario?.nConformidade }}</p>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Http } from '@angular/http';
+import { FormularioRecebimento } from './formulario.recebimento';
 
 @Component({
   selector: 'app-formulario.consulta',
@@ -26,7 +27,7 @@ export class FormularioConsultaComponent implements OnInit {
   }
 
   //passa para próxima página
-  proximaPagina(arrayFormularios: Array<any>){
+  proximaPagina(arrayFormularios: Array<FormularioRecebimento>){
      this.arrayFormularios = arrayFormularios;
 
   }
