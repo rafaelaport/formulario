@@ -14,7 +14,7 @@
         [routerLink]="['/consulta', formulario.idFormulario]">
             <td>{{ formulario.idFormulario }}</td>
             <td>{{ formulario.notaFiscal }}</td>
-            <td>{{ formulario.dtReceb }}</td>
+            <td>{{ formulario.dtReceb | date:'dd/MM/yyyy' }}</td>
             <td>{{ formulario.fornecedor }}</td>      
         </tr>
     </tbody>
