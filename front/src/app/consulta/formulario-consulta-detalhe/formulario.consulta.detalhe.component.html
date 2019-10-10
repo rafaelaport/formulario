@@ -1,11 +1,50 @@
-<p>Id: {{ formulario?.idFormulario }}</p>
-<p>{{ formulario?.notaFiscal }}</p>
-<p>{{ formulario?.dtReceb }}</p>
-<p>{{ formulario?.oc1 }}</p>
-<p>{{ formulario?.oc2 }}</p>
-<p>{{ formulario?.oc3 }}</p>
-<p>{{ formulario?.fornecedor }}</p>
-<p>{{ formulario?.comprador }}</p>
+
+
+<div class="container">
+  <div class="form">
+    <fieldset desabled>
+      <p>Id: {{ formulario?.idFormulario }}</p>
+      <div class="form-row"> <!-- Linha 1-->
+        <div class="form-group col-md-4 form-control-sm">
+          <label>Nota Fiscal</label>
+          <input placeholder="{{ formulario?.notaFiscal }}">
+          <!--<p>{{ formulario?.notaFiscal }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+          <label>Data de Recebimento</label>
+          <input placeholder="{{ formulario?.dtReceb }}">
+          <!--<p>{{ formulario?.dtReceb }}</p>-->
+        </div>
+      </div>
+      <div class="form-row"> <!-- Linha 2-->
+        <div class="form-group col-md-4 form-control-sm">
+          <label>1ª OC</label>
+          <input placeholder="{{ formulario?.oc1 }}">
+          <!--<p>{{ formulario?.oc1 }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+            <label>2ª OC</label>
+            <input placeholder="{{ formulario?.oc2 }}">
+            <!--<p>{{ formulario?.oc2 }}</p>-->
+        </div>
+        <div class="form-group col-md-4 form-control-sm">
+            <label>3ª OC</label>
+            <input placeholder="{{ formulario?.oc3 }}">
+            <!--<p>{{ formulario?.oc3 }}</p>-->
+        </div>
+      </div>
+      <div class="form-row"> <!-- Linha 3-->
+          <div class="form-group col-md-4 form-control-sm">
+              <label>Fornecedor</label>
+              <input placeholder="{{ formulario?.fornecedor }}">
+              <!--<p>{{ formulario?.fornecedor }}</p>-->
+          </div>
+          <div class="form-group col-md-4 form-control-sm">
+              <label>Comprador</label>
+              <input placeholder="{{ formulario?.comprador }}">
+              <!--<p>{{ formulario?.comprador }}</p>-->
+          </div>
+      </div>
 <p>{{ formulario?.conferente1 }}</p>
 <p>{{ formulario?.conferente2 }}</p>
 <p>{{ formulario?.apresCorreta }}</p>
@@ -20,3 +59,6 @@
 <p>{{ formulario?.prodTermolabil }}</p>
 <p>{{ formulario?.status }}</p>
 <p>{{ formulario?.nConformidade }}</p>
+    </fieldset>
+  </div>
+</div>
