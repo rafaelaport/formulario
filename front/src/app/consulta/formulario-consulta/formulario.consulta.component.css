@@ -2,3 +2,10 @@
     float: right;
     margin-right: 5%;
   }
+
+div.container {
+  margin-top: 25px;
+  background-color: #DCDCDC;
+  border-radius: 15px;
+  padding-top: 20px;
+}

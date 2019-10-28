@@ -1,27 +1,29 @@
-<p>Lista de Formulários</p>
+<div class="container">
+  <p>Lista de Formulários</p>
 
-<input [(ngModel)]="textoPesquisado" placeholder="Buscar">
+  <input [(ngModel)]="textoPesquisado" placeholder="Buscar">
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nota Fiscal</th>
-            <th scope="col">Data de Recebimento</th>
-            <th scope="col">Fornecedor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let formulario of arrayFormularios | filter: 'fornecedor': textoPesquisado"
-        [routerLink]="['/consulta', formulario.idFormulario]">
-            <td>{{ formulario.idFormulario }}</td>
-            <td>{{ formulario.notaFiscal }}</td>
-            <td>{{ formulario.dtReceb | date:'dd/MM/yyyy' }}</td>
-            <td>{{ formulario.fornecedor }}</td>      
-        </tr>
-    </tbody>
-</table>
+  <table class="table table-hover">
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nota Fiscal</th>
+              <th scope="col">Data de Recebimento</th>
+              <th scope="col">Fornecedor</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let formulario of arrayFormularios | filter: 'fornecedor': textoPesquisado"
+          [routerLink]="['/consulta', formulario.idFormulario]">
+              <td>{{ formulario.idFormulario }}</td>
+              <td>{{ formulario.notaFiscal }}</td>
+              <td>{{ formulario.dtReceb | date:'dd/MM/yyyy' }}</td>
+              <td>{{ formulario.fornecedor }}</td>
+          </tr>
+      </tbody>
+  </table>
 
-<div class="align-right">
-  <jw-pagination [items]="items" (changePage)="proximaPagina($event)"></jw-pagination>
+  <div class="align-right">
+    <jw-pagination [items]="items" (changePage)="proximaPagina($event)"></jw-pagination>
+  </div>
 </div>
