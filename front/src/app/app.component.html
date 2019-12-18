@@ -30,6 +30,12 @@
       </li>
     </ul>
   </div>
+    <!-- botão do menu para o Logout-->
+    <ul class="nav navbar-nav mr-auto">
+      <li *ngIf="mostrarMenu" class="nav-item" routerLinkActive="active">
+        <a class="nav-link">Logout</a>
+      </li>
+    </ul>
 </nav>
 <router-outlet></router-outlet>
 </body>
