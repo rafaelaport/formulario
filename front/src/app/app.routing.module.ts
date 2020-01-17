@@ -11,7 +11,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash: true}) // add only more one parameter using useHash with true
     ],
     exports: [
         RouterModule
